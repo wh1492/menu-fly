@@ -1,0 +1,101 @@
+// Fonts from google
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap');
+
+// Functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Variable overrides second
+$primary       : #Fb134d;
+$enable-shadows: true;
+$prefix        : "mo-";
+
+// Required Bootstrap imports
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/buttons";
+
+$color: #1f1f1f;
+
+body,
+html {
+  font-family: 'Roboto Flex', sans-serif;
+  line-height: 1.2;
+  color      : $color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Koulen', cursive;
+}
+
+.btn {
+  font-family: 'Koulen', cursive;
+}
+
+.btn-burger {
+  position  : relative;
+  border    : none;
+  background: none;
+  padding   : 0;
+  width     : 64px;
+  height    : 64px;
+  cursor    : pointer;
+
+  &:hover {
+    span {
+      &:before {
+        top: -10px;
+      }
+
+      &:after {
+        top: calc(21px - 4px);
+      }
+    }
+  }
+
+  span {
+    position  : absolute;
+    width     : 48px;
+    height    : 7px;
+    left      : 50%;
+    top       : 50%;
+    background: #1f1f1f;
+    transform : translate(-50%, -50%) rotate(0);
+    transition: all 0.65s;
+
+    &:before,
+    &:after {
+      content   : '';
+      position  : absolute;
+      width     : 48px;
+      height    : 7px;
+      background: #1f1f1f;
+      left      : 50%;
+      transform : translate(-50%, -50%);
+    }
+
+    &:before {
+      top       : -14px;
+      transition: all 0.65s;
+    }
+
+    &:after {
+      top       : 21px;
+      transition: all 0.45s;
+    }
+  }
+}

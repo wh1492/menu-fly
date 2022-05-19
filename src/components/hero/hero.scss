@@ -1,0 +1,36 @@
+.site-hero {
+  background: rgba(245, 245, 245, 0.98);
+
+  .container {
+    min-height: 100vh;
+
+  }
+
+  .image-hero {
+    max-height: 400px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    > {
+
+      b,
+      span {
+        display: block;
+      }
+
+      b {
+        padding: 0.5rem 0.85rem;
+        display: inline-block;
+        clear  : both;
+        letter-spacing: 0.2rem;
+      }
+
+
+    }
+  }
+}
