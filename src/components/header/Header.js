@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 import heroImage from '../../assets/images/logo.svg';
 import './header.scss'
@@ -13,6 +16,15 @@ const Header = () => {
       document.body.classList.add('menu-open');
     }
     setMenuActive(!menuActive)
+  }
+
+  function clickMenu() {
+    if (menuActive) {
+      document.body.classList.remove('menu-open');
+    } else {
+      document.body.classList.add('menu-open');
+    }
+    setMenuActive(false)
   }
 
   return (
@@ -36,11 +48,11 @@ const Header = () => {
         <div className="container d-flex  align-items-center">
           <button className="btn-burger mt-4" onClick={() => openMenu()}><span></span></button>
           <ul className="menu-list">
-            <li><a href="./#backhome" title="Back Home">Back Home</a></li>
-            <li><a href="./#aboutus" title="About us">About us</a></li>
-            <li><a href="./#whatwedo" title="What we do">What we do</a></li>
-            <li><a href="./#ourwork" title="Our Work">Our Work</a></li>
-            <li><a href="./#contactus" title="Contact us">Contact us</a></li>
+            <li><Link to="./#backhome" title="Back Home" onClick={() => { clickMenu() }}>Back Home</Link></li>
+            <li><Link to="./#aboutus" title="About us" onClick={() => { clickMenu() }}>About us</Link></li>
+            <li><Link to="./#whatwedo" title="What we do" onClick={() => { clickMenu() }}>What we do</Link></li>
+            <li><Link to="./#ourwork" title="Our Work" onClick={() => { clickMenu() }}>Our Work</Link></li>
+            <li><Link to="./#contactus" title="Contact us" onClick={() => { clickMenu() }}>Contact us</Link></li>
           </ul>
         </div>
       </div>

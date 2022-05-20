@@ -5,7 +5,7 @@ import './about.scss'
 const About = () => {
   return (
     <>
-      <div className="container about-us d-flex ">
+      <div id="aboutus" className="container about-us d-flex ">
         <div className="row justify-content-center align-content-center ">
           <div className="col-7 text-center">
             <h3 className="about-title bg-primary text-white">
