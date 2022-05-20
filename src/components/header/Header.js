@@ -36,11 +36,11 @@ const Header = () => {
         <div className="container d-flex  align-items-center">
           <button className="btn-burger mt-4" onClick={() => openMenu()}><span></span></button>
           <ul className="menu-list">
-            <li><a href="#" title="Back Home">Back Home</a></li>
-            <li><a href="#" title="About us">About us</a></li>
-            <li><a href="#" title="What we do">What we do</a></li>
-            <li><a href="#" title="Our Work">Our Work</a></li>
-            <li><a href="#" title="Contact us">Contact us</a></li>
+            <li><a href="/" title="Back Home">Back Home</a></li>
+            <li><a href="/" title="About us">About us</a></li>
+            <li><a href="/" title="What we do">What we do</a></li>
+            <li><a href="/" title="Our Work">Our Work</a></li>
+            <li><a href="/" title="Contact us">Contact us</a></li>
           </ul>
         </div>
       </div>
