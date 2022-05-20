@@ -6,13 +6,9 @@ import './header.scss'
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false)
 
-
-
   function openMenu() {
     setMenuActive(!menuActive)
   }
-
-
 
   return (
     <>
@@ -45,7 +41,6 @@ const Header = () => {
       </div>
     </>
   )
-
 }
 
 export default Header
