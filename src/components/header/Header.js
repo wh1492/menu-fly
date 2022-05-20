@@ -7,6 +7,11 @@ const Header = () => {
   const [menuActive, setMenuActive] = useState(false)
 
   function openMenu() {
+    if (menuActive) {
+      document.body.classList.remove('menu-open');
+    } else {
+      document.body.classList.add('menu-open');
+    }
     setMenuActive(!menuActive)
   }
 
